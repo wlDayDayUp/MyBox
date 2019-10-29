@@ -1,4 +1,4 @@
-package com.wl1217.library.http
+package com.wl1217.mybox
 
 import rxhttp.wrapper.annotation.DefaultDomain
 

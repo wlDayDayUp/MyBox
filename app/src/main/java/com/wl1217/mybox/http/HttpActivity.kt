@@ -15,7 +15,6 @@ import androidx.core.content.FileProvider
 import com.blankj.utilcode.util.UriUtils
 import com.blankj.utilcode.util.ZipUtils
 import com.rxjava.rxlife.RxLife
-import com.wl1217.library.TestHttp
 import com.wl1217.library.format
 import com.wl1217.library.log
 import com.wl1217.library.toast
@@ -67,10 +66,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_http)
-
         getBt.setOnClickListener {
-
-            TestHttp.testGet(this)
 
 
 //            RxHttp.get(GlobConfig.getCs)
@@ -108,7 +104,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
                     it.printStackTrace()
                 })
         }
-        
+
         cameraBt.setOnClickListener {
             takeCamera()
         }

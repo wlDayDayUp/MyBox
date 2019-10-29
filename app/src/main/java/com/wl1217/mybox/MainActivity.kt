@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.rxjava.rxlife.RxLife
 import com.wl1217.mybox.http.HttpActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import rxhttp.wrapper.param.RxHttp
 
 class MainActivity : AppCompatActivity() {
 
