@@ -15,6 +15,7 @@ import androidx.core.content.FileProvider
 import com.blankj.utilcode.util.UriUtils
 import com.blankj.utilcode.util.ZipUtils
 import com.rxjava.rxlife.RxLife
+import com.wl1217.library.TestHttp
 import com.wl1217.library.format
 import com.wl1217.library.log
 import com.wl1217.library.toast
@@ -68,21 +69,25 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         setContentView(R.layout.activity_http)
 
         getBt.setOnClickListener {
-            RxHttp.get(GlobConfig.getCs)
-                .add(
-                    hashMapOf(
-                        "username" to "wg",
-                        "age" to "29"
-                    )
-                )
-                .asObject(GetTestBean::class.java)
-                .`as`(RxLife.asOnMain(this))
-                .subscribe({
-                    it.toString().log()
-                    resultTv.text = it.toString()
-                }, {
-                    it.printStackTrace()
-                })
+
+            TestHttp.testGet(this)
+
+
+//            RxHttp.get(GlobConfig.getCs)
+//                .add(
+//                    hashMapOf(
+//                        "username" to "wg",
+//                        "age" to "29"
+//                    )
+//                )
+//                .asObject(GetTestBean::class.java)
+//                .`as`(RxLife.asOnMain(this))
+//                .subscribe({
+//                    it.toString().log()
+//                    resultTv.text = it.toString()
+//                }, {
+//                    it.printStackTrace()
+//                })
         }
 
         postBt.setOnClickListener {
