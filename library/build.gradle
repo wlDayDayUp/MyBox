@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+
+    //----------------------------------网络请求相关----------------------------------
+    api('com.rxjava.rxhttp:rxhttp:1.2.1') {
+        exclude group: "com.squareup.okhttp3"
+    }
+    api 'com.squareup.okhttp3:okhttp:3.12.3'    // 兼容 Android 5.0一下
+    api 'com.rxjava.rxlife:rxlife:1.1.0'    //页面销毁，关闭请求，非必须
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.2.1'   //注解处理器，生成RxHttp类
+    kapt 'com.rxjava.rxhttp:rxhttp-compiler:1.2.1'  //注解处理器，生成RxHttp类
+
+    //----------------------------------Android 工具----------------------------------
+    api 'com.blankj:utilcodex:1.25.9'
+
+    //----------------------------------动态权限申请----------------------------------
+    api 'pub.devrel:easypermissions:3.0.0'
+}
