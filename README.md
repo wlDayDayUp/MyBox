@@ -16,6 +16,7 @@
 ## 使用
 
 - [MyApp](https://github.com/wlDayDayUp/MyBox/blob/master/app/src/main/java/com/wl1217/mybox/MyApp.java)
+  初始化网络请求、utilcodex工具类
 
 - [Url](https://github.com/wlDayDayUp/MyBox/blob/master/app/src/main/java/com/wl1217/mybox/Url.kt) 需要Rebuild项目，生产RxHttp类
 
@@ -37,3 +38,10 @@
                 android:resource="@xml/file_paths" />
         </provider>
         ```
+
+- 项目中需要有一个bean的包名，存放bean，避免混淆
+
+- [混淆文件](https://github.com/wlDayDayUp/MyBox/tree/master/app/proguard-rules.pro)
+
+- [GlobConfig](https://github.com/wlDayDayUp/MyBox/tree/master/app/src/main/java/com/wl1217/mybox/GlobConfig.kt)
+  全局配置类

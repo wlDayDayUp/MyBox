@@ -1,6 +1,9 @@
 package com.wl1217.mybox;
 
 import android.app.Application;
+
+import com.blankj.utilcode.util.Utils;
+
 import java.util.concurrent.TimeUnit;
 import io.reactivex.plugins.RxJavaPlugins;
 import okhttp3.OkHttpClient;
@@ -18,6 +21,8 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
+
+        Utils.init(this); /*初始化Android Utils*/
         initRxHttp();   /* 初始化网络请求 */
     }
 

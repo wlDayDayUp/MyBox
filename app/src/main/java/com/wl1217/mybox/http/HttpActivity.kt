@@ -20,6 +20,7 @@ import com.wl1217.library.log
 import com.wl1217.library.toast
 import com.wl1217.library.utils.DESCyptoUtil
 import com.wl1217.mybox.BuildConfig
+import com.wl1217.mybox.GlobConfig
 import com.wl1217.mybox.R
 import com.wl1217.mybox.Url
 import com.wl1217.mybox.bean.GetTestBean
@@ -69,21 +70,21 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         getBt.setOnClickListener {
 
 
-//            RxHttp.get(Url.getCs)
-//                .add(
-//                    hashMapOf(
-//                        "username" to "wg",
-//                        "age" to "29"
-//                    )
-//                )
-//                .asObject(GetTestBean::class.java)
-//                .`as`(RxLife.asOnMain(this))
-//                .subscribe({
-//                    it.toString().log()
-//                    resultTv.text = it.toString()
-//                }, {
-//                    it.printStackTrace()
-//                })
+            RxHttp.get(Url.getCs)
+                .add(
+                    hashMapOf(
+                        "username" to "wg",
+                        "age" to "29"
+                    )
+                )
+                .asObject(GetTestBean::class.java)
+                .`as`(RxLife.asOnMain(this))
+                .subscribe({
+                    it.toString().log()
+                    resultTv.text = it.toString()
+                }, {
+                    it.printStackTrace()
+                })
         }
 
         postBt.setOnClickListener {
@@ -91,7 +92,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
                 .add(
                     Url.doTestSign(
                         "",
-                        DESCyptoUtil.encode(Url.prm_contents_key, "q123456789"),
+                        DESCyptoUtil.encode(GlobConfig.prm_contents_key, "q123456789"),
                         "0",
                         ""
                     )
