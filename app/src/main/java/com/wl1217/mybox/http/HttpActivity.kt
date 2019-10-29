@@ -89,7 +89,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
             RxHttp.postForm(GlobConfig.testSign)
                 .add(
                     GlobConfig.doTestSign(
-                        "13773567079",
+                        "",
                         DESCyptoUtil.encode(GlobConfig.prm_contents_key, "q123456789"),
                         "0",
                         ""

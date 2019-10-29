@@ -20,7 +20,7 @@ class GlobConfig {
 
         const val getCs = "$baseUrl/test/getCs"  /*测试get请求*/
 
-        const val testSign = "https://app1.sqsmk.net:443/sqsmk/ykapp/user/dologin"
+        const val testSign = ""
 
         fun doTestSign(username: String, userpwd: String, logintype: String, token: String) =
             RequestParamConvert.getRequestData(
