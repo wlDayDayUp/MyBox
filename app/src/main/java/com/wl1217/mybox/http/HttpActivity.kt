@@ -20,8 +20,8 @@ import com.wl1217.library.log
 import com.wl1217.library.toast
 import com.wl1217.library.utils.DESCyptoUtil
 import com.wl1217.mybox.BuildConfig
-import com.wl1217.mybox.GlobConfig
 import com.wl1217.mybox.R
+import com.wl1217.mybox.Url
 import com.wl1217.mybox.bean.GetTestBean
 import com.wl1217.mybox.bean.TestSignBean
 import kotlinx.android.synthetic.main.activity_http.*
@@ -69,7 +69,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         getBt.setOnClickListener {
 
 
-//            RxHttp.get(GlobConfig.getCs)
+//            RxHttp.get(Url.getCs)
 //                .add(
 //                    hashMapOf(
 //                        "username" to "wg",
@@ -87,11 +87,11 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
         }
 
         postBt.setOnClickListener {
-            RxHttp.postForm(GlobConfig.testSign)
+            RxHttp.postForm(Url.testSign)
                 .add(
-                    GlobConfig.doTestSign(
+                    Url.doTestSign(
                         "",
-                        DESCyptoUtil.encode(GlobConfig.prm_contents_key, "q123456789"),
+                        DESCyptoUtil.encode(Url.prm_contents_key, "q123456789"),
                         "0",
                         ""
                     )
@@ -198,7 +198,7 @@ class HttpActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks {
     private fun setPic() {
 
         val b1 = BitmapFactory.decodeFile(currentPhotoPath)
-        RxHttp.postForm(GlobConfig.oneUploadFile)
+        RxHttp.postForm(Url.oneUploadFile)
             .addFile("test_png", currentPhotoPath)
             .asString()
             .`as`(RxLife.asOnMain(this))
