@@ -13,6 +13,9 @@
 - easypermissions **动态权限请求
   [Go to GitHub](https://github.com/googlesamples/easypermissions)** Apache License 2.0
     
+- BaseRecyclerViewAdapterHelper **RecyclerView适配器
+  [Go to GitHub](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)**
+    
 ## 使用
 
 - [MyApp](https://github.com/wlDayDayUp/MyBox/blob/master/app/src/main/java/com/wl1217/mybox/MyApp.java)

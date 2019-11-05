@@ -48,4 +48,8 @@ dependencies {
 
     //----------------------------------动态权限申请----------------------------------
     api 'pub.devrel:easypermissions:3.0.0'
+
+    //----------------------------------RecyclerView 适配器----------------------------------
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx'
+    api 'androidx.recyclerview:recyclerview:1.0.0'
 }
