@@ -52,4 +52,7 @@ dependencies {
     //----------------------------------RecyclerView 适配器----------------------------------
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.49-androidx'
     api 'androidx.recyclerview:recyclerview:1.0.0'
+
+    //----------------------------------WebView----------------------------------
+    api 'com.just.agentweb:agentweb:4.1.2'
 }

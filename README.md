@@ -15,6 +15,9 @@
     
 - BaseRecyclerViewAdapterHelper **RecyclerView适配器
   [Go to GitHub](https://github.com/CymChad/BaseRecyclerViewAdapterHelper)**
+        
+- AgentWeb **AgentWeb
+  [Go to GitHub](https://github.com/Justson/AgentWeb)** Apache License 2.0
     
 ## 使用
 
