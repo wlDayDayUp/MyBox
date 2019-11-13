@@ -18,6 +18,15 @@
         
 - AgentWeb **AgentWeb
   [Go to GitHub](https://github.com/Justson/AgentWeb)** Apache License 2.0
+          
+- Matisse **Matisse
+  [Go to GitHub](https://github.com/zhihu/Matisse)** Apache License
+  2.0
+   
+- Glide **Glide [Go to GitHub](https://github.com/bumptech/glide)**
+  Apache License 2.0
+  
+  
     
 ## 使用
 
