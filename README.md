@@ -26,6 +26,9 @@
 - Glide **Glide [Go to GitHub](https://github.com/bumptech/glide)**
   Apache License 2.0
   
+- SmartRefreshLayout **SmartRefreshLayout
+  [Go to GitHub](https://github.com/scwang90/SmartRefreshLayout)** Apache License 2.0
+  
   
     
 ## 使用
