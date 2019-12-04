@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+
         val dbHelper = MyDbHelper(this)
 
         addBt.setOnClickListener {
